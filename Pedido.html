@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Titulo de la pestaña de google -->
+    <title>Pasteleria El Rincon del Pastel</title>
+    
+    <!-- estilo.css -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	  <link href="css/bootstrap.min.css" rel="stylesheet">
+	  <link href="css/style.css" rel="stylesheet">
+
+    
+      
+</head>
+<body>
+  
+    <!-- logotipo y titulo -->
+    <div>
+        <img src="img/Logo1.JPG" style="float: left" width="150" height="150" >
+        <br><br>
+        <h1 style="text-align: center;"> Bienvenidos a la Pasteleria "El Rincon del Pastel"</h1>
+    </div>
+    <br>
+    <!--Barra de Navegacion-->   
+    <nav class="menu">
+      <ul style="text-align: right">
+        <a href="Pasteleria.html">Inicio</a>
+        <a href="Pedido.html">Pedido</a>
+        <a href="Sobre_nosotros.html">Sobre nosotros</a>
+       </ul>
+    </nav>
+    <hr>
+    <!-- fomulario de pedido -->
+
+
+
+    <div class="col-md-6">
+      <h1>Realiza tu pedido</h1>
+        <form action="DetallePedido.html" name="DetallePedido" method="post">
+          <table class="table table-condensed">
+            <tr>
+              <h4>Nombre</h4>
+              <input type='text' id="nom" name='nom' placeholder='Nombre'/><p id="nom"></p>
+            </tr>
+            <tr>
+              <h4>Telefono</h4>
+              <input type='text' id="telefono" name='telefono' placeholder='Telefono'><p id="ptelefono"/></p>
+            </tr>
+            <tr>
+              <h4>Coreo Electronico</h4>
+              <input type='text' id="email" name='email' placeholder='Coreo Electronico' onkeyup="revisar(this)" /><p id="pemail"></p>
+            </tr>            
+            <tr>
+              
+              <div class="col-md-9">
+                <h4>Seleciona tu sabor favorito</h4>
+                <label class="checkeable">
+                  <input type="checkbox" name="cap1"/>
+                  <img src="img/chocolate.jpg" height="100"/><h4 class="text-center">chocolate</h4>
+                </label>
+                <label class="checkeable">
+                  <input type="checkbox" name="cap2"/>
+                  <img src="img/Fresa.jpg" height="100"/><h4 class="text-center">Fresa</h4>
+                </label>
+                <label class="checkeable">
+                  <input type="checkbox" name="cap3"/>
+                  <img src="img/Limon.jpg" height="100"/><h4 class="text-center">Limon</h4>
+                </label>
+                <label class="checkeable">
+                  <input type="checkbox" name="cap4"/>
+                  <img src="img/Queso de bola.jpg" height="100"/><h4 class="text-center">Queso de bola</h4>
+                </label>
+              </div>
+            </tr>
+            <tr>
+              <br>
+              
+              <div class="col-md-9">
+                <h4>Seleciona tu adorno favorito</h4>
+                <label class="checkeable">
+                  <input type="checkbox" name="cap1"/>
+                  <img src="img/Superheroes.jpg"  height="100" /><h4 class="text-center">Superheroes</h4>
+                </label>
+                <label class="checkeable">
+                  <input type="checkbox" name="cap2"/>
+                  <img src="img/Boda.jpg" height="100" /><h4 class="text-center">Boda</h4>
+                </label>
+                <label class="checkeable">
+                  <input type="checkbox" name="cap3"/>
+                  <img src="img/flores.jpg" height="100" /><h4 class="text-center">Flores</h4>
+                </label>
+                <label class="checkeable">
+                  <input type="checkbox" name="cap4"/>
+                  <img src="img/Cumpleaños.jpg" height="100" /><h4 class="text-center">Cumpleaños</h4>
+                </label> 
+                <br><br>
+                  <div class="row">
+                    <button class="btn btn-success" type="submit">Enviar Pedido</button>
+                    <button class="btn btn-danger" type="reset">Cancelar Pedido</button>  
+                  </div>                               
+              </div>              
+            </tr>
+            <tr>
+            </tr>                     
+          </table>              
+        </form>        
+      </div>
+</body>

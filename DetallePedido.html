@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Titulo de la pestaña de google -->
+    <title>Pasteleria El Rincon del Pastel</title>
+
+    <!-- estilo.css -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	  <link href="css/bootstrap.min.css" rel="stylesheet">
+	  <link href="css/style.css" rel="stylesheet">
+  
+</head>
+<body>
+
+    <!-- logotipo y titulo -->
+    <div>
+        <img src="img/Logo1.JPG"  style="float: left"alt="" width="150" height="150" >
+        <br><br>
+        <h1 style="text-align: center;"> Bienvenidos a la Pasteleria "El Rincon del Pastel"</h1>
+    </div>
+    <br>
+    <!--Barra de Navegacion-->
+    <nav class="menu">
+      <ul style="text-align: right">
+        <a href="Pasteleria.html">Inicio</a>
+        <a href="Pedido.html">Pedido</a>
+        <a href="Sobre_nosotros.html">Sobre nosotros</a>
+       </ul>
+    </nav>
+    <hr>
+    
+<!--Tabla de inventario de sabores-->
+
+<h2 class="text-center">Inventario de Sabotes</h2>
+
+<div class="col-md-12">
+
+<table class="table">
+<thead class="">
+<tr>
+  <th scope="col">#</th>
+  <th scope="col">Nombre del Sabor</th>
+  <th scope="col">Cantidad Restante</th>
+  
+</tr>
+</thead>
+<tbody>
+<tr>
+  <th scope="row">1</th>
+  <td>Cocolate</td>
+  <td>3pza</td>
+  
+</tr>
+<tr>
+  <th scope="row">2</th>
+  <td>Fesa</td>
+  <td>8pza</td>
+  
+</tr>
+<tr>
+  <th scope="row">3</th>
+  <td>Limon</td>
+  <td>20pza</td>
+  
+</tr>
+<tr>
+  <th scope="row">3</th>
+  <td>Queso de bola</td>
+  <td>10pza</td> 
+</tr>
+</tbody>
+</table>
+</div>
+    
+<!--Tabla de inventario de adornos-->
+  <h2 class="text-center">Inventario de Adornos</h2>
+
+    <div class="col-md-12">
+
+  <table class="table">
+  <thead class="">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre del adorno</th>
+      <th scope="col">Cantidad Restante</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Superheroes</td>
+      <td>3pza</td>
+      
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Boda</td>
+      <td>8pza</td>
+      
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Flores</td>
+      <td>20pza</td>
+      
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Cumpleaños</td>
+      <td>10pza</td> 
+    </tr>
+  </tbody>
+</table>
+</div>
+<br><br><br>
+
+   
+     <!--columna de cliente 1-->
+        <div class="col-md-4" >            
+            <div class="card">
+                <img src="img/usuario.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h3 class="card-title">Nombre: Ricardo Camara</h3>
+                  <p class="card-text">Direcion:.</p>
+                  <p class="card-text">Telefono:.</p>
+                  <p class="card-text">Correo electronico:.</p>
+                  <p class="card-text"><small class="text-muted">Pedido creado Hace 1 hora</small></p>
+                </div>
+              </div>
+              <input type="button" id="boton1" name="boton1" value="Detalle del pedido" class="btn btn-info" onclick="ConfirmDemo()"><br><br>
+        </div>
+
+
+        <!--columna de cliente 2-->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="img/usuario.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h3 class="card-title">Nombre: Lulu Ramirez</h3>
+                  <p class="card-text">Direcion:.</p>
+                  <p class="card-text">Telefono:.</p>
+                  <p class="card-text">Correo electronico:.</p>
+                  <p class="card-text"><small class="text-muted">Pedido creado Hace 1 hora</small></p>
+                </div>
+              </div>
+              <input type="button" id="boton1" name="boton1" value="Detalle del pedido" class="btn btn-info" onclick="ConfirmDemo();"><br><br>
+        </div>
+
+
+
+        <!--columna de cliente 3-->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="img/usuario.png" class="card-img-top" alt="..."  >
+                <div class="card-body">
+                  <h3 class="card-title">Nombre: Ulises Mendoza</h3>
+                  <p class="card-text">Direcion:.</p>
+                  <p class="card-text">Telefono:.</p>
+                  <p class="card-text">Correo electronico:.</p>
+                  <p class="card-text"><small class="text-muted">Pedido creado Hace 1 hora</small></p>
+                </div>
+              </div>
+              <input  type="button" id="boton1" name="boton1" value="Detalle del pedido" class="btn btn-info" onclick="ConfirmDemo();"><br><br>
+        </div>     
+        <br>
+        <!--Funcion alerta del boton-->
+        <script type="text/javascript">
+          function ConfirmDemo() 
+          {
+          //Ingresamos un mensaje a mostrar
+          swal({
+           title: "Sobor: Fersa   Adorno: Flores",       
+           icon: "info",
+              });  
+          }
+          </script>
+</body>

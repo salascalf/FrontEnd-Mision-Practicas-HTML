@@ -1,0 +1,140 @@
+body{
+	background-color: white;
+	/*background: #f2f2f2;*/
+	font-family: 'Open Sans',sans-serif;
+	font-size: 16px;
+	color: #555;
+}
+hr{
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #ccc;
+	margin: 1em 0;
+	padding: 0;
+}
+
+.clear{
+	display: block;
+	height: 50px;
+	border: 0;
+}
+a:hover, a:focus{
+	color: #7cb1e9;
+}
+.navbar-default{
+	background: rgba(0,0,0,.8);
+	border-color: transparent;
+}
+.navbar-default ..navbar-brand{
+	color: white;
+}
+.navbar-default .navbar-li a{
+	color: white;
+}
+.navbar-default .navbar-nav li a:hover{
+	background-color: red;
+	color: #609cd3;
+}
+.error{
+color: red;
+background: #ff9197;
+}
+.bien{
+	color: #008000;
+}
+.publicacion{
+	border: dotted;
+	text-align: center;
+}
+.publicacion img{
+	cursor: pointer;
+}
+.publicacion details{
+	float: right;
+	background-color: red;
+	z-index: 2;
+}
+form input,[type="number"],[type="email"],[type="password"],[type="text"]{
+	width: 400px;
+	height: 40px;
+}
+@media screen and (max-width: 768px){
+	form{
+		margin: 15px 0;
+		font-size: 24px:;
+	}
+}
+
+	.sliderfondo{
+		background-color: white;
+	}
+	#right-control{
+		right: -100px;
+		right: -100px;
+	}
+	.navbar-header{
+		background-color: rgb(130, 162, 209);
+		float: none;
+	}
+	strong{
+		color: aliceblue;
+	}
+	p{
+		  color: black;
+	}
+	a.navbar-brand :hover{
+		background: blue;
+	}
+
+	a.navbar-brand{
+		width: 25%;
+		text-align: center;
+	}
+
+
+.b-example-divider {
+  height: 3rem;
+  background-color: rgba(0, 0, 0, .1);
+  border: solid rgba(0, 0, 0, .15);
+  border-width: 1px 0;
+  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+
+.form-control-dark {
+  color: #fff;
+  background-color: var(--bs-dark);
+  border-color: var(--bs-gray);
+}
+.form-control-dark:focus {
+  color: #fff;
+  background-color: var(--bs-dark);
+  border-color: #fff;
+  box-shadow: 0 0 0 .25rem rgba(255, 255, 255, .25);
+}
+
+.bi {
+  vertical-align: -.125em;
+  fill: currentColor;
+}
+
+.text-small {
+  font-size: 85%;
+}
+
+.dropdown-toggle {
+  outline: 0;
+}
+.checkeable input {
+  display: none;
+}
+.checkeable img {
+  width: 100px;
+  border: 5px solid transparent;
+}
+.checkeable input {
+  display: none;
+}
+.checkeable input:checked  + img {
+  border-color: blue;
+}

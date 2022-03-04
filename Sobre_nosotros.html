@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Titulo de la pestaña de google -->
+    <title>Pasteleria El Rincon del Pastel</title>
+
+
+
+	<script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+
+  
+</head>
+
+<body>
+ <!-- logotipo y titulo -->
+ <div>
+	<img src="img/Logo1.JPG" style="float: left" width="150" height="150" >
+	<br><br>
+	<h1 style="text-align: center;"> Bienvenidos a la Pasteleria "El Rincon del Pastel"</h1>
+</div>
+<br>
+<!--Barra de Navegacion-->
+<nav class="menu">
+  <ul style="text-align: right">
+	<a href="Pasteleria.html">Inicio</a>
+	<a href="Pedido.html">Pedido</a>
+	<a href="Sobre_nosotros.html">Sobre nosotros</a>
+   </ul>
+</nav>
+<hr>
+
+
+
+
+
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-6">
+		<h1>Enviar Mensaje</h1>
+			<form action="msjcontact.php" name="contacto" method="post">
+				<table class="table table-condensed">
+					<tr>
+						<h4>Nombre</h4>
+						<input type='text' id="nombre" name='nombre' placeholder='Nombre Completo' /><p id="pnombre"></p>
+					</tr>
+					<tr>
+						<h4>Coreo Electr&oacute;nico</h4>
+						<input type='text' id="email" name='email' placeholder='Coreo Electr&oacute;nico' onkeyup="revisar(this)" /><p id="pemail"></p>
+					</tr>
+					<tr>
+						<h4>Asunto</h4>
+						<input type='text' id="asunto" name='asunto' placeholder='Asunto'><p id="pasunto" /></p>
+					</tr>
+					<tr>
+						<h4>Mensaje</h4>
+						<textarea id="mensaje" cols='50' rows='5' name='mensaje'></textarea><p id="pmensaje" /></p>
+					</tr>
+					<tr><input type='button' value='Enviar Mensaje' class="btn-info" onclick="enviar();"></tr>
+				</table>
+			</form>
+		</div>
+		<div class="col-md-6">
+		<h3><b>Ubicación:</b></h3><br/>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3067.9109955668523!2d-104.97564968512768!3d39.741650104343016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf9df56fdc001a9d0!2zMznCsDQ0JzI5LjkiTiAxMDTCsDU4JzI0LjUiVw!5e0!3m2!1ses!2smx!4v1646245531638!5m2!1ses!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+		<br/>
+			<p>1600 N Downing St, Denver, CO 80218, Estados Unidos
+			<br/>Telefono: 01800992256
+			<br/>Cel: 999999999
+			<br/>Email: contacto@elrincodelpastel.com
+			<br/>Horaio de atencion: 8.00am a 4:00pm
+			</p>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	function enviar()
+	{
+		var verificar=true;
+
+		if(!document.contacto.nombre.value){
+			document.getElementById("pnombre").innerHTML = "Escriba su Nombre";
+			document.contacto.nombre.focus();
+	  		verificar = false;
+		}
+		else if (!document.contacto.email.value) {
+			document.getElementById("pnombre").innerHTML="";
+			document.getElementById("pemail").innerHTML = "Escriba su Coreo Electr&oacute;nico";
+			document.contacto.email.focus();
+	  		verificar = false;
+		}
+		else if (!document.contacto.asunto.value) {
+			document.getElementById("pnombre").innerHTML="";
+			document.getElementById("pemail").innerHTML = "";
+			document.getElementById("pasunto").innerHTML = "Escriba un asunto para el mensaje";
+			document.contacto.asunto.focus();
+	  		verificar = false;
+		}
+		else if(!document.contacto.mensaje.value){
+			document.getElementById("pnombre").innerHTML="";
+			document.getElementById("pemail").innerHTML = "";
+			document.getElementById("pasunto").innerHTML = "";
+			document.getElementById("pmensaje").innerHTML = "Escriba su mensaje";
+			document.contacto.mensaje.focus();
+	  		verificar = false;
+		}
+		if (verificar){
+			//document.contacto.submit();
+			alert("Su Mensaje a sido enviado.");
+		}
+	}
+	function revisar(valor)
+	{
+		var dato=valor.value;
+		var expresion =/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+		if (!expresion.exec(dato)){
+			document.getElementById("pemail").innerHTML = "Coreo Electr&oacute;nico no valido";
+			document.contacto.email.focus();
+	    }
+	    else
+	    {
+	    document.getElementById("pemail").innerHTML = "";	
+	    }
+	}
+</script>
+<style type="text/css">
+form p{
+	color: red;
+}
+</style>
+</body>
